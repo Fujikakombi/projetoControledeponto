@@ -30,7 +30,7 @@ if (!empty($_SESSION["id"])) {
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="home.php">Registro de ponto</a>
+                        <a class="nav-link" href="?page=registro">Registro de ponto</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="?page=novo">Novo usuário</a>
@@ -52,6 +52,9 @@ if (!empty($_SESSION["id"])) {
                 <?php
 
                 switch (@$_REQUEST["page"]) {
+                    case "registro":
+                        include("registroponto.php");
+                        break;
                     case "novo":
                         include("cadastro.php");
                         break;
@@ -67,8 +70,7 @@ if (!empty($_SESSION["id"])) {
                     case "sair":
                         include("logout.php");
                         break;
-                    default:
-                        print "<h1>Em construção</h1>";
+    
                 }
                 ?>
 
