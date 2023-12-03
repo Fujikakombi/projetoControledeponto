@@ -18,7 +18,6 @@ if (!empty($_SESSION["id"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cadastro</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="registro.css">
 </head>
 
 <body>
