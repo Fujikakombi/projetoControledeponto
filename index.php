@@ -37,7 +37,7 @@ if (!empty($_SESSION["id"])) {
                         <a class="nav-link" href="?page=novo">Novo usuário</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="?page=listar">Listar usuários</a>
+                        <a class="nav-link" href="?page=listar">Listar pontos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="?page=sair">Sair</a>
