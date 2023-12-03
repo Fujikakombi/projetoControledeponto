@@ -16,3 +16,6 @@ date_default_timezone_set('America/Sao_Paulo');
 
 //UFT8
 mysqli_set_charset($connect, 'utf8');
+
+?>
+

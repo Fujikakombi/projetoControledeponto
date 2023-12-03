@@ -1,4 +1,4 @@
-<h1>Usuários</h1>
+<h1>Registro de ponto</h1>
 
 <?php
     $sql = "select * from tb_users";
@@ -10,15 +10,15 @@
     if($qtd > 0){
         print "<table class='table table-hover table-striped table-bordered'>";
         print"<tr>";
-        print "<th>ID</th>";
         print "<th>Nome</th>";
-        print "<th>E-mail</th>";
-        print "<th>Data de Nascimento</th>";
-        print "<th>Ações</th>";
+        print "<th>Data de Entrada</th>";
+        print "<th>entrada</th>";
+        print "<th>saida</th>";
+        print "<th>retorno</th>";
+        print "<th>saida</th>";
         print"</tr>";
         while ($row = $res->fetch_object()){
             print"<tr>";
-            print "<td>".$row->id."</td>";
             print "<td>".$row->nome."</td>";
             print "<td>".$row->e_mail."</td>";
             print "<td>".$row->data_nasc."</td>";

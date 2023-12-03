@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+.mb-3 {
+width: 300px; /* largura desejada */
+margin: 0 auto; /* margens automáticas */
+background-color: rgba(211, 211, 211, 0);
+}
+
+.btn-primabtnry {
+
+width: 300px; /* largura desejada */
+margin: 0 auto; /* margens automáticas */
+background-color: rgba(236, 226, 226, 0);
+display: flex;
+align-items: center;
+justify-content: center;     
+
+}
+
+
+body {  
+    background-image: url('imagens/Ponto.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 5px;
+    
+display: flex;
+flex-direction: column;
+flex-wrap: nowrap;
+justify-content: center;
+align-items: center;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-size: x-large;
+
+}
+
+.btn-primabtnry:hover {
+color: rgb(75, 54, 54);
+}
+
+.dropdown-item {
+font-size: 0.7em;
+color: black;
+margin-left: 60px;
+}
+
+.form-control {
+font-size: 1em;
+opacity: 0.8;
+}
+
+.form-label {
+    color: #030303;
+    Font-weight: bold;
+}
+
+.demo_wrap img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0.6;
+}
+
+.title{
+    margin-bottom: 50px;
+    color: #03080F;
+}
+
+
+ 
+
+
