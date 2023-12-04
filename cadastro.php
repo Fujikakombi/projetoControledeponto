@@ -1,4 +1,4 @@
-<h1>Cadastro</h1>
+<!-- <h1>Cadastro</h1>
 
 <form form action="?page=salvar" method="POST">
     <input type="hidden" name="acao" value="cadastrar">
@@ -36,3 +36,5 @@
         <button type="submit" class="btn btn-primary">Enviar</button>
     </div>
 </form>
+
+-->

@@ -1,21 +1,23 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: url(abstract-dark-3d-rendered-geometric-600nw-217413286.webp) no-repeat;
-    margin: 0;
-    padding: 0;
+    background-size: cover;
+    margin: 10px;
+    padding: 10px; /* Adicionando a unidade de medida */
+    box-sizing: border-box; /* Box-sizing para melhorar o modelo de caixa */
 }
 
 .container {
-    max-width: 800px;
-    margin: 20px auto;
+    max-width: 1000px;
+    margin: 90px 150px auto;
     padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.459); /* Ajuste a transparência conforme necessário */
+    box-shadow: 0 0 20px rgba(253, 253, 253, 0.959);
     border-radius: 8px;
 }
 
 h1 {
-    color: #3498db;
+    color: #ffffff;
 }
 
 table {
@@ -34,25 +36,25 @@ th, td {
 }
 
 th {
-    background-color: #3498db;
-    color: #fff;
+    background-color: #ffffff;
+    color: #000000;
 }
 
 tr:nth-child(even) {
-    background-color: #f9f9f9;
+    background-color: #f7efef;
 }
 
 p {
     margin-bottom: 20px;
-    color: #333;
+    color: #000000;
 }
 
 a {
-    color: #3498db;
+    color: #020202;
     text-decoration: none;
 }
 
 a:hover {
     text-decoration: underline;
-    color: #1d6fa5;
+    color: #ffffff;
 }

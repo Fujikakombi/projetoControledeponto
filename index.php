@@ -18,7 +18,7 @@ if (!empty($_SESSION["id"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cadastro</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="camporegistrar.css">
+    <link rel="stylesheet" href="camporegistrar.css"> 
 </head>
 
 <body>
@@ -33,9 +33,9 @@ if (!empty($_SESSION["id"])) {
                     <li class="nav-item">
                         <a class="nav-link" href="?page=registro">Registro de ponto</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="?page=novo">Novo usuário</a>
-                    </li>
+                   <!-- <li class="nav-item">
+                    <a class="nav-link" href="?page=novo">Novo usuário</a> 
+                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link" href="?page=listar">Listar pontos</a>
                     </li>
