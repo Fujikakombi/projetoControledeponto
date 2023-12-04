@@ -60,7 +60,7 @@ if (!empty($_SESSION["id"])) {
                         include("cadastro.php");
                         break;
                     case "listar":
-                        include("listarUsuario.php");
+                        include("listarregistro.php");
                         break;
                     case "salvar":
                         include("gravarUsuario.php");

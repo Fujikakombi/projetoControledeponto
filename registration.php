@@ -39,7 +39,7 @@ if (isset($_POST["submit"])) {
 <body>
     <div class="regiscreen">
         <form action="" method="post" autocomplete="off">
-            <h2>Registration</h2>
+            <h2>Cadastro</h2>
             <div class="input-box">
                 <input type="text" name="Nome" placeholder="Nome" required>
             </div>
