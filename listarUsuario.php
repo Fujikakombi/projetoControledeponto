@@ -1,37 +1,65 @@
-<h1>Registro de ponto</h1>
-
 <?php
-    $sql = "select * from tb_users";
 
-    $res = $connect->query($sql);
-    
-    $qtd = $res->num_rows;
+// Incluir a conexão com o banco de dados
+include_once "conexaoponto.php";
 
-    if($qtd > 0){
-        print "<table class='table table-hover table-striped table-bordered'>";
-        print"<tr>";
-        print "<th>Nome</th>";
-        print "<th>Data de Entrada</th>";
-        print "<th>entrada</th>";
-        print "<th>saida</th>";
-        print "<th>retorno</th>";
-        print "<th>saida</th>";
-        print"</tr>";
-        while ($row = $res->fetch_object()){
-            print"<tr>";
-            print "<td>".$row->nome."</td>";
-            print "<td>".$row->e_mail."</td>";
-            print "<td>".$row->data_nasc."</td>";
-            print "<td>
-                <button onclick=\"location.href='?page=editar&id=".$row->id."';\" class='btn btn-success'>Editar</button>
-                <button onclick=\"if(confirm('Tem certeza que deseja excluir?')){location.href='?page=salvar&acao=excluir&id=".$row->id."';}else{false;} \" class='btn btn-danger'>Excluir</button>
-                </td>";
-            print"</tr>";
-        }
-        print "</table>";
-    }else{
+// ID do usuário fixo para testar
+$id_usuario = 1;
 
-        print"<p class='alert alert-danger'> Não encontrou resultados!</p>";
-    }
+// Consulta para obter todos os registros de ponto do usuário
+$query_registros = "SELECT data_entrada, entrada, saida_intervalo, retorno_intervalo, saida 
+                    FROM pontos
+                    WHERE usuario_id = :usuario_id
+                    ORDER BY id DESC";
 
+// Preparar a QUERY
+$result_registros = $conn->prepare($query_registros);
+
+// Substituir o link da QUERY pelo valor
+$result_registros->bindParam(':usuario_id', $id_usuario);
+
+// Executar a QUERY
+$result_registros->execute();
+
+// Verificar se encontrou algum registro no banco de dados
+if ($result_registros->rowCount() > 0) {
+    ?>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lista de Registros de Ponto</title>
+        <link rel="stylesheet" href="listaregistro.css">
+    </head>
+    <body>
+        <h1>Lista de Registros de Ponto</h1>
+        <table border="1">
+            <tr>
+                <th>Data</th>
+                <th>Entrada</th>
+                <th>Saída Intervalo</th>
+                <th>Retorno Intervalo</th>
+                <th>Saída</th>
+            </tr>
+            <?php
+            while ($row_registro = $result_registros->fetch(PDO::FETCH_ASSOC)) {
+                ?>
+                <tr>
+                    <td><?= $row_registro['data_entrada'] ?></td>
+                    <td><?= $row_registro['entrada'] ?></td>
+                    <td><?= $row_registro['saida_intervalo'] ?></td>
+                    <td><?= $row_registro['retorno_intervalo'] ?></td>
+                    <td><?= $row_registro['saida'] ?></td>
+                </tr>
+                <?php
+            }
+            ?>
+        </table>
+    </body>
+    </html>
+    <?php
+} else {
+    echo "<p>Nenhum registro de ponto encontrado.</p>";
+}
 ?>

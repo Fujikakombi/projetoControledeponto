@@ -1,20 +1,21 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url(abstract-dark-3d-rendered-geometric-600nw-217413286.webp) no-repeat;
     margin: 0;
     padding: 0;
 }
 
 .container {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 20px;
     background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
 h1 {
-    color: #333;
+    color: #3498db;
 }
 
 table {
@@ -28,12 +29,17 @@ table, th, td {
 }
 
 th, td {
-    padding: 12px;
+    padding: 15px;
     text-align: left;
 }
 
 th {
-    background-color: #f2f2f2;
+    background-color: #3498db;
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
 }
 
 p {
@@ -50,4 +56,3 @@ a:hover {
     text-decoration: underline;
     color: #1d6fa5;
 }
-
